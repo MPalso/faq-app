@@ -4,10 +4,12 @@ import Question from "./components/Question"
 const App = () => {
   return(
     <div>
-        <Question />
-        <Question />
-        <Question />
-        <Question />
+        {
+        questions.map ( (oneQuestion) => {
+          return <Question  key={oneQuestion.id} {...oneQuestion}/>
+
+        })
+      }
     </div>
   )
 }
